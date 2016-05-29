@@ -164,19 +164,23 @@
                     color: _palette(fg-light-active);
                     @include vendor ('transition', 'all #{_duration(transition)} ease');
                     
-                    h3 {
-                        margin-bottom: 10px;
-                    }
+                    div {
+                        margin: 0 auto;
 
-                    p {
-                        font-size: 13px;
-                        font-style: normal;
-                        color: rgba(255, 255, 255, 0.6);
-                    }
-                    
-                    &.is-hovered {
-                        opacity: 1;
-                        background: rgba(0, 0, 0, 0.8); 
+                        h3 {
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            font-style: normal;
+                            color: rgba(255, 255, 255, 0.6);
+                        }
+                        
+                        &.is-hovered {
+                            opacity: 1;
+                            background: rgba(0, 0, 0, 0.8); 
+                        }
                     }
                 }
             }
