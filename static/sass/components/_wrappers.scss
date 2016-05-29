@@ -1,0 +1,48 @@
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+#wrapper {
+    @include vendor ('transition', 'all #{_duration(transition)} ease');
+    padding-left: 0;
+    height: 100%;
+    
+    &.toggled {
+        padding-left: 220px;
+        
+        #sidebar-wrapper {
+            width: 220px;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        
+        #page-content-wrapper {
+            //margin-right: -220px;
+            position: absolute;
+            height: 100%;
+        }
+    }
+    
+    #sidebar-wrapper {
+        @include vendor ('transition', 'all #{_duration(transition)} ease');
+        background: _palette(bg-sidebar);
+        height: 100%;
+        left: 220px;
+        margin-left: -220px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 0;
+        z-index: 1000;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    
+    #page-content-wrapper {
+        padding-top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

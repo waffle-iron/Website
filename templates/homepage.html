@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+                <section id="cover">
+                <div class="cover-overlay">
+                    <div class="text-overlay">
+                        <h2>Linux User Group of Zrenjanin</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia libero, aut culpa veritatis voluptates harum delectus, voluptatem deleniti reprehenderit enim suscipit ipsam officiis pariatur et, magni optio dicta ullam repellat.</p>
+                        <a href="#" class="btn btn-cta">Saznaj više</a>
+                        <a href="#" class="btn btn-cta-outline">Događaji</a>
+                    </div>
+                    <div class="bounce"><a href="#"><i class="fa fa-chevron-down"></i></a></div>
+                </div>
+            </section>
+            <div id="quote" class="container-fluid">
+                <blockquote>Where there is a shell, there is a way!</blockquote>
+           </div>
+            <section id="parts">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div>
+                                <img src="{% static "images/icon-2.png" %}" alt="selling point">
+                                <h3>Udruzenje Linux korisnika</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati id deleniti impedit cum consectetur harum optio, vel laborum quis quia officiis sint quam fugit aspernatur saepe, et ullam culpa libero!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officiis accusantium aliquam soluta nobis velit laborum, tempore sint, repudiandae, quas eveniet corrupti fugiat quia adipisci eius, iusto dicta odit nisi.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div>
+                                <img src="{% static "images/icon-3.png" %}" alt="selling point">
+                                <h3>Hackerspace</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam architecto accusamus ex cum odit voluptas necessitatibus distinctio officiis, doloribus a quis aut quibusdam, earum enim cumque nesciunt, id voluptates natus.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut aliquam quos! Quae adipisci dicta placeat voluptate, voluptatum fugit incidunt suscipit aspernatur molestiae, sapiente corporis aliquid voluptatem obcaecati asperiores nam.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div>
+                                <img src="{% static "images/icon-1.png" %}" alt="selling point">
+                                <h3>Makerspace</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet consequuntur saepe et cupiditate temporibus harum nesciunt iusto, quis perferendis veritatis delectus corporis aut dolores sequi consequatur, soluta sit ipsum odit?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur maxime, maiores. Amet nisi delectus repudiandae ipsa similique facilis provident sed, asperiores omnis accusamus harum, ut, hic est eum aperiam incidunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section News -->
+            <section id="news">
+               <!-- Main Container -->
+                <div class="container-fluid" id="main-container">
+                    <h2>Najnovije vesti</h2>
+
+                    <div class="container-fluid">
+                        <!-- Row -->
+                        <div class="row">
+                            {% for vest in vesti %}
+                            <div class="col-md-4 news-post">
+                                <img src="{% static "images/girlincar.jpg" %}" alt="">
+                                <div class="news-overlay text-center">
+                                    <div>
+                                        <h3>{{ vest.title }}</h3>
+                                        <p>{{ vest.content }}</p>
+                                        <a href="vesti/{{ vest.id }}" class="btn btn-primary-outline">Pročitaj više</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- /.Main Container -->
+            </section>
+            <!-- /.Section News -->
+
+            <!-- Section Contact -->
+            <section id="contact">
+                <div class="container-fluid">
+                   <h2>Kontaktirajte nas!</h2>
+                    <!-- Row -->
+                    <div class="row">
+                        <!-- Contact Form -->
+                        <div class="col-lg-6">
+                            <form>
+                                <fieldset class="form-group">
+                                    <label for="e-mail">E-mail:</label>
+                                    <input type="email" class="form-control" id="e-mail" placeholder="E-mail">
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <label for="subject">Predmet:</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Razlog kontaktiranja">
+                                </fieldset>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Dostavljaj mi vesti na e-mail
+                                    </label>
+                                </div>
+                                <fieldset class="form-group">
+                                    <label for="message">Poruka:</label>
+                                    <textarea class="form-control" id="message" rows="10"></textarea>
+                                </fieldset>
+                                <button type="submit" class="btn btn-success-outline pull-right">Posalji</button>
+                            </form>
+                        </div>
+                        <!-- /.Contact Form -->
+
+                        <!-- Contact Text -->
+                        <div class="col-lg-6">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo, nam, ipsum aspernatur velit sint nihil maxime, ab quo odit vitae ipsam a facere expedita alias blanditiis, aliquid aperiam labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis veritatis aspernatur. Deserunt temporibus laudantium fugiat rerum neque. Id ut fuga incidunt delectus similique, fugiat culpa voluptatem libero dignissimos nulla!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui, reprehenderit et nemo! Animi natus vero, illum voluptatum quidem alias ex consequuntur quisquam ea dicta. Corrupti neque ut architecto dolorem:</p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                                <li>Item 4</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta rerum, repellat nemo perspiciatis eius dolores ullam magni itaque odio ipsa, explicabo quod tempore eos, in nisi commodi ab! Odit, perferendis.</p>
+                        </div>
+                        <!-- /.Contact Text -->
+                    </div>
+                    <!-- /.Row -->
+                </div>
+            </section>
+            <!-- /.Section Contact -->
+{% endblock %}

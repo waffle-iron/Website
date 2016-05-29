@@ -1,0 +1,131 @@
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+.hamburger {
+    background: transparent;
+    border: none;
+    display: block;
+    height: 32px;
+    margin-left: 15px;
+    position: fixed;
+    top: 20px;
+    width: 32px;
+    z-index: 999;
+    
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+    
+    &.is-closed {
+        
+        &:before {
+            @include vendor ('transform', 'translate3d(0, 0, 0)');
+            @include vendor ('transition', 'all .35s ease-in-out');
+            color: _palette(fg-light-active);
+            content: '';
+            display: block;
+            font-size: 14px;
+            line-height: 32px;
+            opacity: 0;
+            text-align: center;
+            width: 100px;
+        }
+        
+        &:hover {
+            before {
+                @include vendor ('transform', 'translate3d(-100px, 0, 0)');
+                @include vendor ('transition', 'all 0.35s ease-in-out');
+                display: block;
+                opacity: 1;
+            }
+            
+            .hamb-top {
+                @include vendor ('transition', 'all .35s ease-in-out');
+                top: 0;
+            }
+            
+            .hamb-bottom {
+                @include vendor ('transition', 'all .35s ease-in-out');
+                bottom: 0;
+            }
+        }
+        
+        .hamb-top {
+            @include vendor ('transition', 'all .35s ease-in-out');
+            background-color: _palette(hamb-closed);
+            border: 1px solid _palette(fg-dark-active);
+            top: 5px;
+        }
+        
+        .hamb-middle {
+            margin-top: -2px;
+            background-color: _palette(hamb-closed);
+            border: 1px solid _palette(fg-dark-active);
+            top: 50%;
+        }
+        
+        .hamb-bottom {
+            @include vendor ('transition', 'all .35s ease-in-out');
+            background-color: _palette(hamb-closed);
+            border: 1px solid _palette(fg-dark-active);
+            bottom: 5px;
+        }
+    }
+    
+    &.is-closed .hamb-top, &.is-closed .hamb-middle, &.is-closed .hamb-bottom, 
+    &.is-open .hamb-top, &.is-open .hamb-middle, &.is-open .hamb-bottom  {
+        height: 4px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    
+    &.is-open {
+        .hamb-top {
+            @include vendor ('transform', 'rotate(45deg)');
+            @include vendor('transition', '-webkit-transform .2s cubic-bezier(.73,1,.28,.08)');
+            background-color: _palette(hamb-opened);
+            border: 1px solid _palette(fg-dark-active);
+            margin-top: -2px;
+            top: 50%;
+        }
+        
+        .hamb-middle {
+            background-color: _palette(hamb-opened);
+            border: 1px solid _palette(fg-dark-active);
+            display: none;
+        }
+        
+        .hamb-bottom {
+            @include vendor ('transform', 'rotate(-45deg)');
+            @include vendor('transition', '-webkit-transform .2s cubic-bezier(.73,1,.28,.08)');
+            background-color: _palette(hamb-opened);
+            border: 1px solid _palette(fg-dark-active);
+            margin-top: -2px;
+            top: 50%;
+        }
+        
+        &:before {
+            @include vendor ('transform', 'translate3d(0, 0, 0)');
+            @include vendor ('transition', 'all .35s ease-in-out');
+            color: _palette(fg-light-active);
+            content: '';
+            display: block;
+            font-size: 14px;
+            line-height: 32px;
+            opacity: 0;
+            text-align: center;
+            width: 100px;
+        }
+        
+        &:hover {
+            before {
+                @include vendor ('transform', 'translate3d(-100px,0,0)');
+                @include vendor ('transition', 'all .35s ease-in-out');
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+

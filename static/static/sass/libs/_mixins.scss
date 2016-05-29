@@ -1,0 +1,75 @@
+/// Wraps @content in a @media block using a given breakpoint.
+/// @param {string} $breakpoint Breakpoint.
+/// @param {map} $queries Additional queries.
+@mixin breakpoint($breakpoint: null, $queries: null) {
+
+    $query: 'screen';
+
+    // Breakpoint.
+        @if $breakpoint and map-has-key($breakpoints, $breakpoint) {
+            $query: $query + ' and ' + map-get($breakpoints, $breakpoint);
+        }
+
+    // Queries.
+        @if $queries {
+            @each $k, $v in $queries {
+                $query: $query + ' and (' + $k + ':' + $v + ')';
+            }
+        }
+
+    @media #{$query} {
+        @content;
+    }
+
+}
+
+/// Vendorizes a declaration's property and/or value(s).
+/// @param {string} $property Property.
+/// @param {mixed} $value String/list of value(s).
+@mixin vendor($property, $value) {
+
+    // Determine if property should expand.
+        $expandProperty: index($vendor-properties, $property);
+
+    // Determine if value should expand (and if so, add '-prefix-' placeholder).
+        $expandValue: false;
+
+        @each $x in $value {
+            @each $y in $vendor-values {
+                @if $y == str-slice($x, 1, str-length($y)) {
+
+                    $value: set-nth($value, index($value, $x), '-prefix-' + $x);
+                    $expandValue: true;
+
+                }
+            }
+        }
+
+    // Expand property?
+        @if $expandProperty {
+            @each $vendor in $vendor-prefixes {
+                #{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+            }
+        }
+
+    // Expand just the value?
+        @elseif $expandValue {
+            @each $vendor in $vendor-prefixes {
+                #{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+            }
+        }
+
+    // Neither? Treat them as a normal declaration.
+        @else {
+            #{$property}: #{$value};
+        }
+
+}
+
+///
+/// Sets breakpoints.
+/// @param {map} $x Breakpoints.
+///
+@mixin skel-breakpoints($x: ()) {
+    $breakpoints: $x !global;
+}

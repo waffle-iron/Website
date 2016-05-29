@@ -1,0 +1,69 @@
+/*-------------------------------*/
+/*           Buttons             */
+/*-------------------------------*/
+.btn {
+    padding: 11px 16px;
+    margin: 0;
+    background: transparent;
+    font-family: _font(family);
+    font-weight: _font(weight-bold);
+    font-size: 14px;
+    display: inline-block;
+    letter-spacing: 2px;
+    border: 5px;
+    @include vendor('transition', 'all #{_duration(transition)} ease');
+    
+    &.btn-cta {
+        width: 225px;
+        padding: 20px 35px;
+        color: _palette(fg-dark-active);
+        border: 2px solid _palette(fg-light-active);
+        background: _palette(fg-light-active);
+        
+        &:hover {
+            color: _palette(fg-light-active);
+            background: _palette(sidebar-ninth);
+            border-color: _palette(sidebar-ninth);
+        }
+    }
+    
+    &.btn-cta-outline {
+        width: 225px;
+        padding: 20px 35px;
+        background: rgba(255, 255, 255, 0.2);
+        color: _palette(fg-light-active);
+        border: 2px solid _palette(fg-light-active);
+        
+        &:hover {
+            color: _palette(sidebar-ninth);
+            background: rgba(112, 79, 160, 0.2);
+            border-color: _palette(sidebar-ninth);
+        }
+    }
+    
+    &.btn-primary-outline {
+        padding: 11px 16px;
+        color: _palette(fg-light-active);
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid _palette(fg-light-active);
+        
+        &:hover {
+            color: _palette(sidebar-ninth);
+            background: rgba(112, 79, 160, 0.2);
+            border-color: _palette(sidebar-ninth);
+        }
+    }
+    
+    &.btn-success-outline {
+        padding: 11px 30px;
+        color: _palette(fg-light-active);
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid _palette(fg-light-active);
+        
+        &:hover {
+            color: _palette(github);
+            background: rgba(108, 198, 68, 0.3);
+            border-color: _palette(github);
+        }
+    }
+}
