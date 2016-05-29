@@ -4,7 +4,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # idea folder
-.idea/
+/.idea/lugozr.iml
+/.idea/*.xml
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
