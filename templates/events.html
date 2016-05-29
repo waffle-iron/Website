@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} - Događaji{% endblock %}
+{% block content %}
+    <style>
+    body {
+        margin-top: 70px;
+    }
+
+    .event {
+        margin-bottom: 25px;
+    }
+
+    .event-data {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+    </style>
+ <!-- Page Content -->
+            <div class="container">
+
+                <!-- Page Header -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Kategorija
+                            <small>Događaji</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <!-- Projects Row -->
+                <div class="row">
+                    {% for item in items %}
+                    <div class="col-md-4 event">
+                        <a href="/event/{{ item.pk }}">
+                            <img class="img-responsive" src="http://lightcastletech.com/wp-content/uploads/2013/08/lightcastle-django.png" alt="">
+                        </a>
+                        <h3>
+                            <a href="/event/{{ item.pk }}">{{ item.name }}</a>
+                        </h3>
+                        <div class="event-data">
+                            <small><i class="fa fa-fw fa-clock-o"></i> {{ item.create_date }}</small>
+                            <small><i class="fa fa-fw fa-user"></i>{{ item.lecturer }}</small>
+                        </div>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- /.row -->
+
+                <hr>
+
+                <!-- Pagination -->
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#">&laquo;</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <hr>
+            </div>
+{% endblock %}
