@@ -15,8 +15,8 @@ class News(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField()
     picture = models.ImageField(upload_to="static", blank=True)
-    publish_date = models.DateField()
-    create_date = models.DateField()
+    publish_date = models.DateTimeField()
+    create_date = models.DateTimeField()
     category = models.ForeignKey('Category')
 
     def __str__(self):
