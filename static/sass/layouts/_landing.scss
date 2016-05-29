@@ -125,18 +125,6 @@
     #main-container {
         padding: 0;
         
-        #news-carousel {
-            
-            .carousel-control {
-                width: 50px;
-                @include vendor ('transition', 'all #{_duration(transition)} ease');
-            }
-            
-            .carousel-indicators {
-                bottom: 5px;
-            }
-        }
-        
         .row {
             
             .col-md-4 {
