@@ -11,4 +11,6 @@ install:
   - pip install -r requirements.txt
   - pip install django==$DJANGO
 
-script: python manage.py test sajt
+script:
+  - python manage.py migrate sajt
+  - python manage.py test sajt
