@@ -4,9 +4,9 @@ from django.conf import settings
 
 class Subscriber(models.Model):
     name = models.CharField(max_length=70)
-    email = models.EmailField(max_length=100)
+    email = models.EmailField(max_length=100, unique=True)
     date_subscribed = models.DateTimeField(auto_now_add=True)
-    status = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
