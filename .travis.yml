@@ -1,0 +1,11 @@
+language: python
+
+python:
+  - 3.5
+
+env:
+  - DJANGO=1.9.5
+
+install:
+  - pip install -r requirements.txt
+  - pip install django==$DJANGO --quite
