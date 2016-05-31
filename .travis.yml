@@ -15,3 +15,6 @@ script:
   # - python manage.py makemigrations sajt
   # - python manage.py migrate sajt
   - python manage.py test sajt
+
+notifications:
+  slack: lugozr:S7LA2ies5KxkaVCObexdB1Es
