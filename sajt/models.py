@@ -18,7 +18,7 @@ class News(models.Model):
     content = models.TextField()
     lead = models.TextField(max_length=255, blank=True)
     picture = models.ImageField(upload_to="static", blank=True)
-    create_date = models.DateTimeField()
+    create_date = models.DateTimeField(auto_now_add=True)
     publish_date = models.DateTimeField()
     category = models.ForeignKey('Category')
 
