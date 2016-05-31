@@ -14,9 +14,10 @@ class News(models.Model):
     title = models.CharField(max_length=70)
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField()
+    lead = models.TextField(max_length=255, blank=True)
     picture = models.ImageField(upload_to="static", blank=True)
-    publish_date = models.DateTimeField()
     create_date = models.DateTimeField()
+    publish_date = models.DateTimeField()
     category = models.ForeignKey('Category')
 
     def __str__(self):
