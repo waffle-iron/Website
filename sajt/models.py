@@ -5,6 +5,8 @@ from django.conf import settings
 class Subscriber(models.Model):
     name = models.CharField(max_length=70)
     email = models.EmailField(max_length=100)
+    date_subscribed = models.DateTimeField(auto_now_add=True)
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
@@ -48,9 +50,9 @@ class Lecturer(models.Model):
 
 class Event(models.Model):
     name = models.CharField(max_length=70)
-    description = models.TextField()
-    create_date = models.DateField()
-    picture = models.ImageField()
+    create_date = models.DateTimeField(auto_now_add=True)
+    description = models.TextField(blank=True)
+    picture = models.ImageField(blank=True)
     lecturer = models.ForeignKey('Lecturer')
 
     def __str__(self):
