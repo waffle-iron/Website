@@ -16,5 +16,10 @@ script:
   # - python manage.py migrate sajt
   - python manage.py test sajt
 
+branches:
+  only:
+    - master
+    - develop
+
 notifications:
   slack: lugozr:S7LA2ies5KxkaVCObexdB1Es
