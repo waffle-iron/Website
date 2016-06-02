@@ -1,58 +1,218 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-                <section id="cover">
-                <div class="cover-overlay">
-                    <div class="text-overlay">
-                        <h2>Linux User Group of Zrenjanin</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia libero, aut culpa veritatis voluptates harum delectus, voluptatem deleniti reprehenderit enim suscipit ipsam officiis pariatur et, magni optio dicta ullam repellat.</p>
-                        <a href="#" class="btn btn-cta">Saznaj više</a>
-                        <a href="#" class="btn btn-cta-outline">Događaji</a>
-                    </div>
-                    <div class="bounce"><a href="#"><i class="fa fa-chevron-down"></i></a></div>
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Linux User Group of Zrenjanin</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet cupiditate delectus deserunt doloremque doloribus eius eos ex id incidunt inventore minima nemo porro quas saepe sit ut, vero voluptate!</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Saznaj više</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">O nama</h2>
+                    <hr class="light">
+                    <p class="text-faded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi natus quo sit? Cum illo iste itaque labore numquam repellat temporibus. Cum distinctio eius facilis id illo iusto nulla perspiciatis sed.</p>
+                    <a href="#" class="btn btn-default btn-xl">Pridruži se!</a>
                 </div>
-            </section>
-            <div id="quote" class="container-fluid">
-                <blockquote>Where there is a shell, there is a way!</blockquote>
-           </div>
-            <section id="parts">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <div>
-                                <img src="{% static "images/icon-2.png" %}" alt="selling point">
-                                <h3>O udruženju</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati id deleniti impedit cum consectetur harum optio, vel laborum quis quia officiis sint quam fugit aspernatur saepe, et ullam culpa libero!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officiis accusantium aliquam soluta nobis velit laborum, tempore sint, repudiandae, quas eveniet corrupti fugiat quia adipisci eius, iusto dicta odit nisi.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div>
-                                <img src="{% static "images/icon-3.png" %}" alt="selling point">
-                                <h3>Hackerspace</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam architecto accusamus ex cum odit voluptas necessitatibus distinctio officiis, doloribus a quis aut quibusdam, earum enim cumque nesciunt, id voluptates natus.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut aliquam quos! Quae adipisci dicta placeat voluptate, voluptatum fugit incidunt suscipit aspernatur molestiae, sapiente corporis aliquid voluptatem obcaecati asperiores nam.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div>
-                                <img src="{% static "images/icon-1.png" %}" alt="selling point">
-                                <h3>Makerspace</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet consequuntur saepe et cupiditate temporibus harum nesciunt iusto, quis perferendis veritatis delectus corporis aut dolores sequi consequatur, soluta sit ipsum odit?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur maxime, maiores. Amet nisi delectus repudiandae ipsa similique facilis provident sed, asperiores omnis accusamus harum, ut, hic est eum aperiam incidunt.</p>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Šta nudimo?</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                        <h3>Interaktivne radionice</h3>
+                        <p class="text-muted">Svaka radionica je u vidu projekta. Učimo kroz praktičan rad i primere!</p>
                     </div>
                 </div>
-            </section>
-            <!-- Section News -->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Saradnja</h3>
+                        <p class="text-muted">Saradnja sa lokalnim kompanijama i projekti sa drugim udruženjima!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Najnovije tehnologije</h3>
+                        <p class="text-muted">Naša predavanja i projekti uvek prate najnovije tehnologije i standarde u svetu!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Druženje</h3>
+                        <p class="text-muted">Upoznaj ljude koje zanimaju iste stvari kao i tebe!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/1.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/2.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/3.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/4.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/5.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="{% static "images/portfolio/6.jpg" %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="read-more">
+                <a href="/blog" class="btn btn-primary btn-xl">Pročitaj više</a>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Želiš da budeš obavešten u vezi dešavanja? </h2>
+                <input id="subscribe-box" type="email" class="btn-xl wow tada" placeholder="Email adresa">
+                <a href="#" class="btn btn-default btn-xl wow tada">Predplati se!</a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Kontaktiraj nas!</h2>
+                    <hr class="primary">
+                    <p>Želiš da se družis, da naučiš nove stvari i da podeliš svoje znanje sa drugima? Kontaktiraj nas na nekoj od stranica ili nam pošalji email i mi ćemo ti odgovoriti u najkraćem roku!</p>
+                </div>
+                <div class="col-lg-2 col-lg-offset-2 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">contact@lugozr.org</a></p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <i class="fa fa-facebook fa-3x wow bounceIn"></i>
+                    <p><a target="_blank" href="https://www.facebook.com/LUGZR/?fref=ts">lugozr@facebook</a></p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <i class="fa fa-twitter fa-3x wow bounceIn"></i>
+                    <p><a target="_blank" href="https://twitter.com/lugozr">lugozr@twitter</a></p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <i class="fa fa-github fa-3x wow bounceIn"></i>
+                    <p><a target="_blank" href="https://github.com/lugozr">lugozr@github</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
             <section id="news">
-               <!-- Main Container -->
                 <div class="container-fluid" id="main-container">
                     <h2>Najnovije vesti</h2>
 
                     <div class="container-fluid">
-                        <!-- Row -->
                         <div class="row">
                             {% for vest in vesti %}
                             <div class="col-md-4 news-post">
@@ -69,17 +229,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.Main Container -->
             </section>
-            <!-- /.Section News -->
 
-            <!-- Section Contact -->
             <section id="contact">
                 <div class="container-fluid">
                    <h2>Kontaktirajte nas!</h2>
-                    <!-- Row -->
                     <div class="row">
-                        <!-- Contact Form -->
                         <div class="col-lg-6">
                             <form>
                                 <fieldset class="form-group">
@@ -102,9 +257,7 @@
                                 <button type="submit" class="btn btn-success-outline pull-right">Posalji</button>
                             </form>
                         </div>
-                        <!-- /.Contact Form -->
 
-                        <!-- Contact Text -->
                         <div class="col-lg-6">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo, nam, ipsum aspernatur velit sint nihil maxime, ab quo odit vitae ipsam a facere expedita alias blanditiis, aliquid aperiam labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis veritatis aspernatur. Deserunt temporibus laudantium fugiat rerum neque. Id ut fuga incidunt delectus similique, fugiat culpa voluptatem libero dignissimos nulla!</p>
@@ -117,10 +270,7 @@
                             </ul>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta rerum, repellat nemo perspiciatis eius dolores ullam magni itaque odio ipsa, explicabo quod tempore eos, in nisi commodi ab! Odit, perferendis.</p>
                         </div>
-                        <!-- /.Contact Text -->
                     </div>
-                    <!-- /.Row -->
                 </div>
-            </section>
-            <!-- /.Section Contact -->
+            </section> -->
 {% endblock %}
