@@ -10,55 +10,58 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="{% static "css/theme.css" %}">
     </head>
-    <body>
-        <div id="wrapper">
-            <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/">LUGoZR</a>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="navigation">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/">Početna</a></li>
-                            <li><a href="#">O nama</a></li>
-                            <li><a href="/event/">Događaji</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a id="facebook" target="_blank" href="https://www.facebook.com/LUGZR/?fref=ts"><i class="fa fa-fw fa-facebook"></i></a></li>
-                            <li><a id="twitter" target="_blank" href="https://twitter.com/lugozr"><i class="fa fa-fw fa-twitter"></i></a></li>
-                            <li><a id="github" target="_blank" href="https://github.com/lugozr"><i class="fa fa-fw fa-github"></i></a></li>
-                        </ul>
-                    </div>
+    <body id="page-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">Lugozr</a>
                 </div>
-            </nav>
 
-            {% block content %}
-            {% endblock %}
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="/">Početna</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/event">Događaji</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
 
-<footer>
-                <div id="copyright">&copy; 2016 Linux User Group of Zrenjanin. All rights reserved.</div>
-            </footer>
-            <!-- /.Footer -->
-        </div>
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+            <div id="copyright">&copy; 2016 Linux User Group of Zrenjanin. All rights reserved.</div>
+        </footer>
+        <!-- /.Footer -->
 
         <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!--<script src="javascript/main.js"></script>-->
-        <script src="{% static "javascript/landing.js" %}"></script>
-        <script>
-            $(document).ready(function() {
-               $('.carousel').carousel({
-                   interval: 10000
-               })
-            });
-        </script>
+        <script src="{% static "javascript/theme.js" %}"></script>
     </body>
 </html>
