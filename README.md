@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/phpreboot/website.png?label=ready&title=Ready)](https://waffle.io/phpreboot/website)
 [![Stories in Ready](https://badge.waffle.io/cleancode-solutions/website.png?label=ready&title=Ready)](https://waffle.io/cleancode-solutions/website)
 [![Stories in Ready](https://badge.waffle.io/LUGoZR/website.png?label=ready&title=Ready)](https://waffle.io/LUGoZR/website)
 # LUGoZR django website
