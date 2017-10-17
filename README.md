@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/citizenlabsgr/website.png?columns=all)](https://waffle.io/citizenlabsgr/website?utm_source=badge)
 [![Stories in Ready](https://badge.waffle.io/fosslk/website.png?label=ready&title=Ready)](https://waffle.io/fosslk/website)
 [![Stories in Ready](https://badge.waffle.io/jwalton9/website.png?label=ready&title=Ready)](https://waffle.io/jwalton9/website)
 [![Stories in Ready](https://badge.waffle.io/jwalton9/website.png?label=ready&title=Ready)](https://waffle.io/jwalton9/website)
